@@ -22,8 +22,6 @@ exports[`renders correctly 1`] = `
         "textAlign": "center",
       }
     }
-  >
-    Welcome to React Native!
   </Text>
   <Text
     accessible={true}
@@ -37,7 +35,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    This is a React Native snapshot test.
+    This is a React Native snapshot for login page.
   </Text>
 </View>
 `;
@@ -159,7 +157,6 @@ exports[`renders correctly for intro 1`] = `
       }
     }
   >
-    Welcome to React Native!
   </Text>
   <Text
     accessible={true}
@@ -173,7 +170,7 @@ exports[`renders correctly for intro 1`] = `
       }
     }
   >
-    This is a React Native snapshot test.
+    This is a React Native snapshot for main page.
   </Text>
 </View>
 `;
