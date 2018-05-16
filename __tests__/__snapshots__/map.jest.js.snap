@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches snapshot 1`] = `
+<View style={{flex: 1}}>
+      <GooglePlacesAutocomplete
+          placeholder='Enter Location'
+          minLength={2}
+          autoFocus={false}
+          returnKeyType={'default'}
+          fetchDetails={true}
+          query={{
+            key: 'AIzaSyAXOB1FSBnZCPUoCJFfSD8moqYBYeHFgkg' // Replace API key right here
+          }}
+          onPress={(data, details = null) => {
+            // console.log(details.formatted_address);
+            // console.log(details.geometry.location.lat);
+            // console.log(details.geometry.location.lng);
+            this.setState({
+              latitude: details.geometry.location.lat,
+              longitude: details.geometry.location.lng,
+              location_address: details.formatted_address
+            });
+          }}
+          styles={{
+            textInputContainer: {
+              backgroundColor: 'rgba(0,0,0,0)',
+              borderTopWidth: 0,
+              borderBottomWidth:0
+            },
+            textInput: {
+              marginLeft: 0,
+              marginRight: 0,
+              height: 38,
+              color: '#5d5d5d',
+              fontSize: 16
+            },
+            predefinedPlacesDescription: {
+              color: '#1faadb'
+            },
+          }}
+          currentLocation={true}
+        />
+        <MapView
+          style={{ flex: 5 }}
+          region={{
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+          annotations={
+          [  {
+            latitude: this.state.latitude,
+            longitude: this.state.longitude,
+            title: 'Destination/Current Location'
+          } ]
+        }
+        />
+        <Button
+        onPress={this.rideHome}
+        title="To UWA"
+        color="#841584"
+        accessibilityLabel="Click this to ride from University to home"
+        />
+        <Button
+        onPress={this.rideUni}
+        title="From UWA"
+        color="#841584"
+        accessibilityLabel="This will organise a ride from home to university"
+        />
+      </View>
+    );
+  }
+}
