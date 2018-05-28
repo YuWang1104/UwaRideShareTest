@@ -38,7 +38,7 @@ class ClassName(object):
         self.driver.find_element_by_name('Change Login Mode').click()
         username = self.driver.find_element_by_name('21658782@student.uwa.edu.au')
         sleep(0.3)
-        username.send_keys(YOUR_QQ)
+        username.send_keys(YOUR_Email)
         sleep(0.3)
         password = self.driver.find_elements_by_xpath('//iOS.widget.EditText')[1]
         sleep(0.3)
