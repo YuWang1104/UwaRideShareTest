@@ -22,4 +22,4 @@ test('EmailErrorMessage 3',function(){
 test('EmailErrorMessage 3',function(){
 	expect(EmailErrorMessage(false,true)).toBe(null);
 });
-//test EmailErrorMessage with four different inputs
+
